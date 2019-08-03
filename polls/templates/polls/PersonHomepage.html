@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <div id="center"><a href={% url 'PersonLogin' %}>Login</a></div>
+</nav>
+<aside>
+  <div id="center"><a href={% url 'PersonSignup' %}>Sign up</a></div>
+</aside>
+
+{% endblock %}

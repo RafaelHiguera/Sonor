@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <h1>Select the Company :</h1>
+  <ul>
+    {% for entreprise in entreprises %}
+    <li>
+      <a href=/polls/PersonHomepage/requests?entrepriseName={{entreprise.entrepriseName}}>{{ entreprise.entrepriseName }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<aside>
+</aside>
+{% endblock %}

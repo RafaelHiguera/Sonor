@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+  Chosen Company : <b> {{ entrepriseName }} </b>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <th><label for="id_JobName">Job name:</label></th>
+        <td><input type="text" name="jobName" required /></td>
+      </tr>
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+</nav>
+<aside>
+</aside>
+{% endblock %}

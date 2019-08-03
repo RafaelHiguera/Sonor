@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+  <h1>Requests</h1>
+  <ul>
+    {% for request in requests %}
+    <li>
+      <h3>Person SIN Number : {{ request.personSINRequests.SIN_Number }}</h3> Job application : {{request.jobName}}
+      <p></p>
+      <form method="post">
+        {% csrf_token %}
+        <input value={{request.personSINRequests.SIN_Number}} name="SIN_Number" type="hidden" />
+        <span style="color:red">{{errorMessage}}</span>
+        <input type="submit" value="Get cv">
+      </form>
+      <p></p>
+      <a href=/polls/EntrepriseHomepage/PersonRequest/?Sin={{request.personSINRequests.SIN_Number}}&id={{request.id}}>Hire</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<aside>
+</aside>
+{% endblock %}

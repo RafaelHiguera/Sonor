@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <p>Company name : {{ entrepriseName }} </p>
+  <a href={% url 'Cv' %}><button>Reupload Cv</button></a>
+  <p></p>
+  <a href={% url 'Personal_Informations' %}><button>Change personal informations</button></a>
+  <p></p>
+  <a href={% url 'RequestForEntreprise' %}><button>Make a request to an entreprise</button></a>
+</nav>
+<aside>
+  <div id="center"><a href={% url 'Logout' %}>Logout</a></div>
+</aside>
+
+{% endblock %}

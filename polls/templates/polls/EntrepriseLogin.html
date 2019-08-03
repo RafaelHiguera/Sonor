@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <th><label for="id_entrepriseName">Entreprise Name:</label></th>
+        <td><input type="text" name="entrepriseName" required id="id_entrepriseName" /></td>
+      </tr>
+      <tr>
+        <th><label for="id_entreprisePassword">Password:</label></th>
+        <td><input type="password" name="entreprisePassword" required id="id_entreprisePassword" /></td>
+      </tr>
+    </table>
+    <input type="submit" value="Login">
+  </form>
+</nav>
+<aside>
+</aside>
+{% endblock %}

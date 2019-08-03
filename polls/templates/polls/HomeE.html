@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <div id="center"><a href={% url 'PersonRequest' %}>Requests</a></div>
+</nav>
+<aside>
+  <div id="center"><a href={% url 'Logout' %}>Logout</a></div>
+</aside>
+
+{% endblock %}

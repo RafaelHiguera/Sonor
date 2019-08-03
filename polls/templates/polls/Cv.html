@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+  <h1> Cv </h1>
+  <h3> Only word and pdf files </h3>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input required type="file" name="myfile">
+    <p></p>
+    <button type="submit">Upload Cv</button>
+  </form>
+  {% if errorMessage %}
+  <p>File was not upload : {{ errorMessage }}</p>
+  {% endif %}
+</nav>
+<aside>
+</aside>
+{% endblock %}

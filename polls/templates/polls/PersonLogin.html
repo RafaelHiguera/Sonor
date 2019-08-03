@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <th><label for="id_SIN_Number">Sin number:</label></th>
+        <td><input type="text" name="SIN_Number" maxlength="9" minlength="9" required id="id_SIN_Number" /></td>
+      </tr>
+      <tr>
+        <th><label for="id_Person_Password">Password:</label></th>
+        <td><input type="password" name="Person_Password" required id="id_Person_Password" /></td>
+      </tr>
+    </table>
+    <input type="submit" value="Login">
+  </form>
+</nav>
+<aside>
+</aside>
+{% endblock %}

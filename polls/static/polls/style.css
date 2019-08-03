@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Times, serif;
+}
+
+body {
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  min-height: calc(100vh - 40vh);
+}
+
+#main>article {
+  flex: 1;
+}
+
+#main>nav, #main>aside {
+  flex: 0 0 25vw;
+  background: #a3c1ad;
+}
+
+#main>nav {
+  order: -1;
+}
+
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+
+header, footer {
+  background: #49796b;
+
+}
+
+header{
+  height: 30vh;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+}
+
+#versace {
+  display: block;
+  margin: 0 auto;
+}
+
+#center {
+  font-size: 4vw;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 500px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  height: 10vh;
+}

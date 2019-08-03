@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sonor</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+</head>
+
+<body>
+  <header><a href="/polls"><img src="/static/polls/images/SonorLogo.png"></a></header>
+
+  <div id="main">
+    <article><img src="/static/polls/images/versace.png" id="versace"></article>
+
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer>© 2018 Rafael Higuera ALL RIGHTS RESERVED</footer>
+</body>
+
+</html>
